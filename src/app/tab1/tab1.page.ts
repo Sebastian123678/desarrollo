@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FipeService } from '../services/fipe.service';
 
 @Component({
@@ -8,14 +8,16 @@ import { FipeService } from '../services/fipe.service';
 })
 export class Tab1Page implements OnInit{
   carros:any;
-
+  iconname = 'car-sport';
   constructor(private fipeservice:FipeService) {}
 
   ngOnInit(){
+    this.carros = this.fipeservice.getFipe('carros/marcas');
+    /*
     this.fipeservice.getFipe('carros/marcas').subscribe(data => {
       this.carros = data;
       console.log(data);
-    })
+    })*/
   }
 
 }
