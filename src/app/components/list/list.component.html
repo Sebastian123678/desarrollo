@@ -2,7 +2,7 @@
   <ion-row>
     <ion-col size="12" *ngFor="let item of (obtenapi | async)">
       <ion-list>
-        <ion-item>
+        <ion-item (click) = "showItem(item)">
           <ion-label>{{item.nome}}</ion-label>
           <ion-icon [name] = "icon" slot="end"></ion-icon>
         </ion-item>

@@ -15,8 +15,12 @@ const routes: Routes = [
     loadChildren: () => import('./modelos-motos/modelos-motos.module').then( m => m.ModelosMotosPageModule)
   },
   {
-    path: 'modelos-camiones',
+    path: 'camiones/:id',
     loadChildren: () => import('./modelos-camiones/modelos-camiones.module').then( m => m.ModelosCamionesPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./components/login/login.module').then( m => m.LoginPageModule)
   }
 ];
 @NgModule({

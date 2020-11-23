@@ -7,6 +7,17 @@ export const environment = {
   fipeUrl: 'https://parallelum.com.br/fipe/api/v1/'
 };
 
+export const firebaseConfig = {
+  apiKey: "AIzaSyB7awwGTMsguJMUEK5URQA5-OQYeAfzTFU",
+  authDomain: "proyectofinal-e97c9.firebaseapp.com",
+  databaseURL: "https://proyectofinal-e97c9.firebaseio.com",
+  projectId: "proyectofinal-e97c9",
+  storageBucket: "proyectofinal-e97c9.appspot.com",
+  messagingSenderId: "341688773813",
+  appId: "1:341688773813:web:cb9eca601fce1a558662fc",
+  measurementId: "G-TS7B33EL4K"
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
