@@ -5,5 +5,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <br>
+  <ion-button (click) = "Onlogout()" expand="block">Desconectarse</ion-button>
+  <br>
   <app-list [obtenapi] = "carros" [icon] = "iconname"></app-list>
 </ion-content>

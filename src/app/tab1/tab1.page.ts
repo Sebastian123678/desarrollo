@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FipeService } from '../services/fipe.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-tab1',
@@ -9,7 +10,8 @@ import { FipeService } from '../services/fipe.service';
 export class Tab1Page implements OnInit{
   carros:any;
   iconname = 'car-sport';
-  constructor(private fipeservice:FipeService) {}
+  constructor(private fipeservice : FipeService,
+    public authservice : AuthService) {}
 
   ngOnInit(){
     this.carros = this.fipeservice.getFipe('carros/marcas');
@@ -18,6 +20,10 @@ export class Tab1Page implements OnInit{
       this.carros = data;
       console.log(data);
     })*/
+  }
+
+  Onlogout(){
+    this.authservice.logout();
   }
 
 }
